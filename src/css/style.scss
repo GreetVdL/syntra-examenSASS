@@ -3,6 +3,14 @@
 @use "./base/reset";
 @use "./base/fonts";
 @use "../icons/style.css";
+@use "sass:map";
+
+$fw-os: (
+  "regular": 400,
+  "semibold": 600,
+  "bold": 700,
+);
+// font-weight: map-get($fw-os, semibold);
 
 html {
   font-size: 62.5%;
