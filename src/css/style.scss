@@ -42,6 +42,12 @@ body {
     display: flex;
     justify-content: space-between;
     padding-top: 14px;
+    .burger {
+      color: $white;
+      font-size: 1.8rem;
+      padding-top: 22px;
+      display: none;
+    }
     nav {
       display: flex;
       a {
