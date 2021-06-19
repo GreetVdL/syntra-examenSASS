@@ -119,8 +119,6 @@ body {
       &:hover {
         // transform: scale(1.05);
         font-weight: map-get($fw-roboto, "black");
-        border: 2px solid $turquoise;
-        margin-top: 43px;
       }
     }
     ul {
@@ -225,8 +223,6 @@ body {
         &:hover {
           // transform: scale(1.05);
           font-weight: map-get($fw-roboto, "black");
-          border: 2px solid $turquoise;
-          margin-top: 27px;
         }
       }
     }
@@ -432,8 +428,6 @@ body {
       &:hover {
         // transform: scale(1.05);
         font-weight: map-get($fw-roboto, "black");
-        border: 2px solid $turquoise;
-        margin-top: 108px;
       }
     }
   }
@@ -540,8 +534,6 @@ body {
         &:hover {
           // transform: scale(1.05);
           font-weight: map-get($fw-roboto, "black");
-          border: 2px solid $turquoise;
-          margin-top: 67px;
         }
       }
     }
