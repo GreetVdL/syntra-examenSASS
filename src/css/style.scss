@@ -113,5 +113,27 @@ body {
         border: 2px solid $turquoise;
       }
     }
+    ul {
+      display: flex;
+      padding-top: 127px;
+      li {
+        &:not(:last-child) {
+          margin-right: 4px;
+        }
+        &::after {
+          content: "";
+          display: block;
+          width: 9px;
+          height: 9px;
+          background-color: transparent;
+          border-radius: 50%;
+          border: 1px solid $white;
+        }
+        &.on::after {
+          background-color: $turquoise;
+          border: 1px solid $turquoise;
+        }
+      }
+    }
   }
 }
