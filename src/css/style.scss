@@ -5,12 +5,18 @@
 @use "../icons/style.css";
 @use "sass:map";
 
-$fw-os: (
+$fw-play: (
   "regular": 400,
-  "semibold": 600,
   "bold": 700,
+  "black": 900,
 );
-// font-weight: map-get($fw-os, semibold);
+// font-weight: map-get($fw-play, regular);
+
+$fw-roboto: (
+  "regular": 400,
+  "black": 900,
+);
+// font-weight: map-get($fw-roboto, regular);
 
 html {
   font-size: 62.5%;
