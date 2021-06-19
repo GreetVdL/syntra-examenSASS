@@ -26,7 +26,8 @@ html {
 
 body {
   .container {
-    max-width: 942px;
+    max-width: calc(942px + 40px);
+    padding: 0 20px;
     margin: 0 auto;
   }
 }
@@ -34,7 +35,7 @@ body {
 // SECTION 1
 
 .section1 {
-  height: 669px;
+  min-height: 669px;
   background-image: url("../images/trees1.jpg");
   background-size: cover;
   background-position: top center;
@@ -83,6 +84,7 @@ body {
       text-transform: capitalize;
       color: $white;
       padding-bottom: 58px;
+      text-align: center;
       &::after {
         content: "";
         display: block;
@@ -100,6 +102,7 @@ body {
       font-size: 1.4rem;
       color: $white;
       line-height: 2.4rem;
+      text-align: center;
     }
     button {
       background-color: transparent;
@@ -123,6 +126,7 @@ body {
     ul {
       display: flex;
       padding-top: 127px;
+      margin-bottom: 70px;
       li {
         &:not(:last-child) {
           margin-right: 4px;
@@ -148,7 +152,7 @@ body {
 // SECTION 2
 
 .section2 {
-  height: 569px;
+  min-height: 569px;
   .container {
     display: flex;
     flex-direction: column;
@@ -183,6 +187,12 @@ body {
     main {
       padding-top: 66px;
       display: flex;
+      align-items: center;
+      img {
+        // display: block;
+        // width: 100%;
+        // height: auto;
+      }
       aside {
         margin-left: 116px;
         font-family: "Roboto", sans-serif;
@@ -211,6 +221,7 @@ body {
         cursor: pointer;
         margin-top: 29px;
         transition: all 100ms;
+        margin-bottom: 90px;
         &:hover {
           // transform: scale(1.05);
           font-weight: map-get($fw-roboto, "black");
@@ -257,7 +268,8 @@ body {
 // SECTION 4
 
 .section4 {
-  height: 754px;
+  min-height: 754px;
+  padding-bottom: 71px;
   header {
     h2 {
       font-size: 2.2rem;
@@ -292,7 +304,7 @@ body {
       flex-direction: column;
       align-items: center;
       padding: 38px 18px 46px 18px;
-      height: 250px;
+      min-height: 250px;
       &:first-child {
         border-bottom: 1px solid $line;
         border-right: 1px solid $line;
@@ -322,6 +334,7 @@ body {
         color: $subtitle-text;
         padding-top: 30px;
         padding-bottom: 23px;
+        text-align: center;
       }
       p {
         font-family: "Roboto", sans-serif;
@@ -338,7 +351,7 @@ body {
 // SECTION 5
 
 .section5 {
-  height: 711px;
+  min-height: 711px;
   background-image: url("../images/trees1.jpg");
   background-size: cover;
   background-position: top center;
@@ -379,6 +392,11 @@ body {
     @include make-col(4, 18px);
     margin-top: 65px;
     section {
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
       footer {
         border: 1px solid rgba(227, 225, 226, 0.5);
         padding: 21px 44px;
@@ -410,6 +428,7 @@ body {
       margin-top: 110px;
       transition: all 100ms;
       text-transform: uppercase;
+      margin-bottom: 70px;
       &:hover {
         // transform: scale(1.05);
         font-weight: map-get($fw-roboto, "black");
@@ -423,7 +442,7 @@ body {
 // SECTION 6
 
 .section6 {
-  height: 793px;
+  min-height: 793px;
   .special-container {
     // max-width: 1400px;
     display: flex;
@@ -431,6 +450,7 @@ body {
     align-items: center;
     margin: 0 auto;
     header {
+      padding: 0 20px;
       h2 {
         font-size: 2.2rem;
         text-align: center;
@@ -516,6 +536,7 @@ body {
         margin-top: 69px;
         transition: all 100ms;
         text-transform: uppercase;
+        margin-bottom: 97px;
         &:hover {
           // transform: scale(1.05);
           font-weight: map-get($fw-roboto, "black");
@@ -541,6 +562,120 @@ body {
       font-family: "Roboto", sans-serif;
       font-weight: map-get($fw-roboto, "black");
       font-size: 1.4rem;
+    }
+  }
+}
+
+// RESPONSIVE DESIGN
+
+@media screen and (max-width: 773px) {
+  .section1 {
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .section4 {
+    main {
+      @include make-col(2, 0px);
+      article {
+        &:first-child {
+          border-bottom: 1px solid $line;
+          border-right: 1px solid $line;
+        }
+        &:nth-child(2) {
+          border-bottom: 1px solid $line;
+          border-right: none;
+        }
+        &:nth-child(3) {
+          border-bottom: 1px solid $line;
+          border-right: 1px solid $line;
+        }
+        &:nth-child(4) {
+          border-bottom: 1px solid $line;
+          border-right: none;
+        }
+        &:nth-child(5) {
+          border-right: 1px solid $line;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 773px) {
+  .section2 {
+    .container {
+      main {
+        flex-direction: column;
+        align-items: center;
+        aside {
+          margin-left: 0;
+        }
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 661px) {
+  .section5 {
+    main {
+      @include make-col(2, 18px);
+    }
+  }
+  .section6 {
+    .special-container {
+      main {
+        @include make-col(3, 0px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 555px) {
+  .section1 {
+    header {
+      flex-direction: row;
+      .burger {
+        display: block;
+      }
+      nav {
+        display: none;
+      }
+    }
+  }
+  .section4 {
+    main {
+      @include make-col(1, 0px);
+      article {
+        &:first-child {
+          border-bottom: none;
+          border-right: none;
+        }
+        &:nth-child(2) {
+          border-bottom: none;
+          border-right: none;
+        }
+        &:nth-child(3) {
+          border-bottom: none;
+          border-right: none;
+        }
+        &:nth-child(4) {
+          border-bottom: none;
+          border-right: none;
+        }
+        &:nth-child(5) {
+          border-right: none;
+        }
+      }
+    }
+  }
+  .section5 {
+    main {
+      @include make-col(1, 18px);
     }
   }
 }
